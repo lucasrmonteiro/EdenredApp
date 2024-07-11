@@ -1,9 +1,9 @@
 ﻿services:
   edenredapp.api:
-    image: edenredapp.api
+    image: MobileCredits.api
     build:
       context: .
-      dockerfile: EdenredApp.API/Dockerfile
+      dockerfile: MobileCredits.API/Dockerfile
     ports:
       - "5000:8080"
       - "5001:443"
@@ -12,7 +12,7 @@
 
   postgres-edenredapp:
     image: postgres:latest
-    container_name: EdenredApp-database
+    container_name: MobileCredits-database
     environment:
       POSTGRES_DB: EdenredApp
       POSTGRES_USER: admin

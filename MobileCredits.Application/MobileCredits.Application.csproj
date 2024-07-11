@@ -1,0 +1,14 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>net8.0</TargetFramework>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>enable</Nullable>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\MobileCredits.Infra\MobileCredits.Infra.csproj" />
+      <ProjectReference Include="..\MobileCredits.Persistance\MobileCredits.Persistance.csproj" />
+    </ItemGroup>
+
+</Project>

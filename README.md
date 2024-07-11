@@ -1,2 +1,2 @@
-# EdenredApp
-Technical Assessment Edenred
+# MobileCredits
+Technical Assessment for Mobile Credits
