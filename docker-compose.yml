@@ -1,0 +1,31 @@
+﻿services:
+  edenredapp.api:
+    image: edenredapp.api
+    build:
+      context: .
+      dockerfile: EdenredApp.API/Dockerfile
+    ports:
+      - "5000:8080"
+      - "5001:443"
+    networks:
+      - database
+
+  postgres-edenredapp:
+    image: postgres:latest
+    container_name: EdenredApp-database
+    environment:
+      POSTGRES_DB: EdenredApp
+      POSTGRES_USER: admin
+      POSTGRES_PASSWORD: 123
+    ports:
+      - "5432:5432"
+    networks:
+      - database
+    volumes:
+      - postgres-data:/var/lib/postgresql/data
+        
+networks:
+  database:
+    driver: bridge      
+volumes:
+    postgres-data:
